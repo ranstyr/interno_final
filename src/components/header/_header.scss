@@ -1,0 +1,211 @@
+.title-bar {
+  .logo {
+    a {
+      position: relative;
+      display: inline-block;
+      padding: 0 0 0 32px;
+      color: white;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      background: url(../../assets/images/Icon_LogoGreen.svg) no-repeat 0 50%;
+      background-size: 2rem 2rem;
+    }
+  }
+}
+
+.flags {
+  .icon-holder, .inline-block {
+    span {
+      background-repeat: no-repeat;
+      width: 1.625rem;
+      height: 1.5rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .en-US {
+    background-image: url('../../assets/images/Icon_Flag_En.svg');
+  }
+  .de-DE {
+    background-image: url('../../assets/images/Icon_Flag_DE.svg');
+  }
+  .es-ES {
+    background-image: url('../../assets/images/Icon_Flag_Es.svg');
+  }
+  .ja-JP {
+    background-image: url('../../assets/images/Icon_Flag_JP.svg');
+  }
+  .ru-RU {
+    background-image: url('../../assets/images/Icon_Flag_Ru.svg');
+  }
+  .ar-EG {
+    background-image: url('../../assets/images/Icon_Flag_Ar.svg');
+  }
+  .zh-CN {
+    background-image: url('../../assets/images/Icon_Flag_Ch.svg');
+  }
+  .zh-CHT {
+    background-image: url('../../assets/images/Icon_Flag_Ch.svg');
+  }
+}
+
+.add-nav {
+  ul {
+    margin: 0;
+    font-size: 12px;
+    ul {
+      li + li {
+        border-top: 1px solid #898e96;
+      }
+    }
+    a {
+      display: block;
+      padding: 11px 5px 10px;
+      strong {
+        font-weight: 600;
+      }
+    }
+    a.lightbox[href="#popup1"] {
+      padding: 5px 10px;
+      border-radius: 3px;
+      background-color: transparent;
+      transition: background-color 0.4s linear;
+      &:hover {
+        background-color: #4a5668;
+      }
+    }
+  }
+  > ul {
+    > li {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      & + li:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: "I";
+        font-size: 20px;
+        margin: 0 2px 0 -4px;
+        color: #898e96;
+      }
+      &.has-drop-down {
+        z-index: 1;
+
+        .has-drop-down-a {
+          &:after {
+            font: normal normal normal 9px/24px SimpleLine !important;
+            margin: 0 0 0 7px;
+            content: "\e804";
+            font-size: inherit;
+          }
+        }
+        &.hover .dropdown {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+    a {
+      color: white;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .fa {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 20px;
+      &.fa-user {
+        display: none;
+      }
+    }
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    li:last-child .dropdown {
+      min-width: 190px;
+    }
+    li:first-child .dropdown {
+      min-width: 200px;
+    }
+    .dropdown {
+      position: absolute;
+      right: 0;
+      min-width: 150px;
+      transition: visibility .3s linear, opacity .3s ease, transform 0.3s ease;
+      transform: translateY(-10px);
+      visibility: hidden;
+      opacity: 0;
+      background: #3b4453;
+      border-radius: 3px;
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+      .active a {
+        opacity: 1;
+      }
+      a {
+        padding: 10px;
+        opacity: 0.8;
+        transition: opacity .3s linear;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .heading {
+        display: block;
+        border-bottom: 1px solid #829eb1;
+        font-size: 11px;
+        line-height: 14px;
+        padding: 6px 9px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .icon-holder {
+        display: inline-block;
+        width: 28px;
+        margin: 0 5px 0 0;
+        text-align: center;
+        img {
+          display: inline-block;
+          vertical-align: top;
+          height: 26px;
+          width: auto;
+        }
+      }
+      &:after, &:before {
+        bottom: 100%;
+        right: 20px;
+        border: solid transparent;
+        content: " ";
+        position: absolute;
+      }
+      &:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-bottom-color: #3b4453;
+        border-width: 8px;
+        margin-left: -8px;
+      }
+      &:before {
+        border-bottom-color: #3b4453;
+        border-width: 10px;
+      }
+    }
+  }
+}
+
+.has-drop-down {
+  .dropdown {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    text-align: left;
+  }
+
+  &:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

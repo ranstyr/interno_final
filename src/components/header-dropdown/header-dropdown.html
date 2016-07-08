@@ -1,0 +1,41 @@
+<div class="inline-block"
+     ng-click="Dropdown.toggleMobileOpen()">
+  <a href="" class="has-drop-down-a header-icon"
+     ng-if="!Dropdown.userName">
+    <span ng-class="Dropdown.dropdownList.mainIconClass"></span>
+  </a>
+
+  <a href="" class="has-drop-down-a header-name"
+     ng-if="Dropdown.userName">
+      <span class="header-name-text">
+        <span translate="lblHello"></span>
+        <strong>{{ Dropdown.userName }}</strong>
+      </span><i class="fa fa-user"></i>
+  </a>
+</div>
+
+<si-toggle-visible
+    toggle-model="Dropdown.isDropdownMobileOpen"
+    on-focus-lost="Dropdown.isDropdownMobileOpen = false">
+  <div class="dropdown" role="menu"
+       ng-class="{ 'mobile-open': Dropdown.isDropdownMobileOpen }">
+
+    <strong ng-if="Dropdown.dropdownTitle"
+            class="heading" translate="{{ Dropdown.dropdownTitle }}"></strong>
+
+    <ul>
+      <li class="dropdown-menu"
+          ng-class="{ active: Dropdown.isActive(selection) }"
+          ng-click="Dropdown.selectMenuOption(selection)"
+          ng-repeat="selection in Dropdown.dropdownList.listOfOptions track by $index">
+        <a ng-href="{{::selection.href}}" target="{{::selection.target || '_blank'}}">
+            <span class="icon-holder">
+              <span ng-class="selection.iconClass"></span>
+            </span>
+          <span translate="{{ selection.text }}"></span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</si-toggle-visible>

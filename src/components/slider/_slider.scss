@@ -1,0 +1,44 @@
+.slider{
+  .low, .high {
+    font-size: 0.785714em;
+    line-height: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #4d4d4d;
+  }
+
+  input[type=range]{
+    z-index: 1;
+  }
+
+  .lable-container{
+    height: 1.5em;
+
+    .label {
+      position: absolute;
+      background: #8ba941;
+      text-align: center;
+      color: white;
+      left: 0;
+      top: 1%;
+      z-index: 1;
+
+    }
+    .label:before {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 2px;
+      bottom: 100%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      border: 0.3em solid transparent;
+      border-bottom-color: #8ba941;
+    }
+
+  }
+
+}
+
+

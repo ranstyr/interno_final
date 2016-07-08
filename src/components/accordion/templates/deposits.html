@@ -1,0 +1,49 @@
+<div class="accordion-item" ng-class="{'is-active': AccordionItem.isActive()}">
+
+    <div class="accordion-title grid-block" ng-click="AccordionItem.isExpandable() && AccordionItem.expand()">
+        <div class="grid-content noscroll">{{ AccordionItem.title }}</div>
+        <div class="grid-content shrink edit">
+            <img src="../../../assets/images/edit.svg"
+                 ng-show="AccordionItem.isExpandable() && !AccordionItem.isActive()"/>
+        </div>
+    </div>
+
+    <div class="accordion-content">
+        <form novalidate name="form">
+            <section class="padding-left">
+                <div>
+                    <span>My initial deposit will be of</span>
+                    <input name="amount" class="custom-input" ng-model-options="{ updateOn: 'blur' }"
+                           ng-model="Accordion.$localStorage.wizardSelection.initialDeposit"
+                           ng-change="Accordion.onChange()" ng-currency currency-symbol="$"
+                           si-toggle-currency ng-min="10" ng-max="20" required style="width:15%"/>
+                    <span class="shrink info ">
+                         <img src="../../../assets/images/Info.svg"
+                              tooltip-placement="right"
+                              tooltip-trigger="mouseenter"
+                              tooltip-append-to-body="true"
+                              tooltip={{AccordionItem.tooltip}}>
+                    </span>
+                </div>
+                <div class="padding-top-half padding-bottom">
+                    <span>and then, I plan to deposit</span>
+                    <input name="amount" class="custom-input" ng-model-options="{ updateOn: 'blur' }"
+                           ng-model="Accordion.$localStorage.wizardSelection.monthlyDeposit"
+                           ng-change="Accordion.onChange()" ng-currency currency-symbol="$"
+                           si-toggle-currency ng-min="10" ng-max="20" required style="width:15%"/>
+                    <span>on a monthly basis</span>
+                    <span class="shrink info ">
+                        <img src="../../../assets/images/Info.svg"
+                             tooltip-placement="right"
+                             tooltip-trigger="mouseenter"
+                             tooltip-append-to-body="true"
+                             tooltip={{AccordionItem.tooltip}}>
+                    </span>
+                </div>
+            </section>
+            <button class="button expand no-margin" ng-click="AccordionItem.expandNext()">Next Step <span
+                    class="btn-arrow">></span>
+            </button>
+        </form>
+    </div>
+</div>

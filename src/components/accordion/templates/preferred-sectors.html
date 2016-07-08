@@ -1,0 +1,29 @@
+<div class="accordion-item" ng-class="{'is-active': AccordionItem.isActive()}">
+
+    <div class="accordion-title grid-block" ng-click="AccordionItem.isExpandable() && AccordionItem.expand()">
+        <div class="grid-content noscroll">{{ AccordionItem.title }}</div>
+        <div class="grid-content shrink edit">
+            <img src="../../../assets/images/edit.svg"
+                 ng-show="AccordionItem.isExpandable() && !AccordionItem.isActive()"/>
+        </div>
+    </div>
+
+    <div class="accordion-content padding-bottom">
+        <form novalidate name="form">
+            <div class="padding-half padding-left">
+                <span class="text">You may choose to follow the advisor’s settings or select up to 3 sectors you find the most promising. You can change this at any time.</span>
+            </div>
+            <div class="padding-half padding-left">
+                <input id="checkbox1" type="checkbox" ng-model="Accordion.$localStorage.wizardSelection.useAdvisor"
+                       ng-change="Accordion.onChange()"><label for="checkbox1">Use advisor’s picks</label>
+                    <span class="shrink info ">
+                        <img src="../../../assets/images/Info.svg"
+                             tooltip-placement="right"
+                             tooltip-trigger="mouseenter"
+                             tooltip-append-to-body="true"
+                             tooltip={{AccordionItem.tooltip}}>
+                    </span>
+            </div>
+        </form>
+    </div>
+</div>

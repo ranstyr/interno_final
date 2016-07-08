@@ -1,0 +1,280 @@
+{
+  "portfolioData": {
+    "RiskLevel": 5,
+    "PortfolioID": 1,
+    "Assets": [
+      {
+        "AssetName": "500.Com Limited",
+        "Weight": 35,
+        "SubCategoryColor": "#495623",
+        "Ticker": "WBAI",
+        "SubCategoryName": "Corporate bonds"
+      },
+      {
+        "AssetName": "51job, Inc.",
+        "Weight": 35,
+        "SubCategoryColor": "#758938",
+        "Ticker": "JOBS",
+        "SubCategoryName": "Government bonds"
+      },
+      {
+        "AssetName": "58.com Inc.",
+        "Weight": 30,
+        "SubCategoryColor": "#7e678b",
+        "Ticker": "WUBA",
+        "SubCategoryName": "Developed Stocks"
+      }
+    ],
+    "Performance": {
+      "YearRevenueList": [
+        {
+          "Year": 2006,
+          "Revenue": 3
+        },
+        {
+          "Year": 2007,
+          "Revenue": 5.2
+        },
+        {
+          "Year": 2008,
+          "Revenue": -2.6
+        },
+        {
+          "Year": 2009,
+          "Revenue": 0.2
+        },
+        {
+          "Year": 2010,
+          "Revenue": -0.5
+        },
+        {
+          "Year": 2011,
+          "Revenue": 7.5
+        },
+        {
+          "Year": 2012,
+          "Revenue": 4
+        },
+        {
+          "Year": 2013,
+          "Revenue": -3.4
+        },
+        {
+          "Year": 2014,
+          "Revenue": 2.2
+        },
+        {
+          "Year": 2015,
+          "Revenue": 1.3
+        },
+        {
+          "Year": 2016,
+          "Revenue": -2.5
+        }
+      ]
+    },
+    "Projection": {
+      "Type": "StandardDeviation",
+      "Lines": [
+        {
+          "Name": "Sd2minus",
+          "Points": [
+            {
+              "Year": 2016,
+              "Point": 10000
+            },
+            {
+              "Year": 2017,
+              "Point": 20680
+            },
+            {
+              "Year": 2018,
+              "Point": 31960
+            },
+            {
+              "Year": 2019,
+              "Point": 43240
+            },
+            {
+              "Year": 2020,
+              "Point": 54520
+            },
+            {
+              "Year": 2021,
+              "Point": 65800
+            },
+            {
+              "Year": 2022,
+              "Point": 77080
+            },
+            {
+              "Year": 2023,
+              "Point": 88360
+            },
+            {
+              "Year": 2024,
+              "Point": 99640
+            },
+            {
+              "Year": 2025,
+              "Point": 110920
+            },
+            {
+              "Year": 2026,
+              "Point": 122200
+            }
+          ]
+        },
+        {
+          "Name": "Sd1minus",
+          "Points": [
+            {
+              "Year": 2016,
+              "Point": 10000
+            },
+            {
+              "Year": 2017,
+              "Point": 21340
+            },
+            {
+              "Year": 2018,
+              "Point": 32980
+            },
+            {
+              "Year": 2019,
+              "Point": 44620
+            },
+            {
+              "Year": 2020,
+              "Point": 56260
+            },
+            {
+              "Year": 2021,
+              "Point": 67900
+            },
+            {
+              "Year": 2022,
+              "Point": 79540
+            },
+            {
+              "Year": 2023,
+              "Point": 91180
+            },
+            {
+              "Year": 2024,
+              "Point": 102820
+            },
+            {
+              "Year": 2025,
+              "Point": 114460
+            },
+            {
+              "Year": 2026,
+              "Point": 126100
+            }
+          ]
+        },
+        {
+          "Name": "Sd1plus",
+          "Points": [
+            {
+              "Year": 2016,
+              "Point": 10000
+            },
+            {
+              "Year": 2017,
+              "Point": 22660
+            },
+            {
+              "Year": 2018,
+              "Point": 35020
+            },
+            {
+              "Year": 2019,
+              "Point": 47380
+            },
+            {
+              "Year": 2020,
+              "Point": 59740
+            },
+            {
+              "Year": 2021,
+              "Point": 72100
+            },
+            {
+              "Year": 2022,
+              "Point": 84460
+            },
+            {
+              "Year": 2023,
+              "Point": 96820
+            },
+            {
+              "Year": 2024,
+              "Point": 109180
+            },
+            {
+              "Year": 2025,
+              "Point": 121540
+            },
+            {
+              "Year": 2026,
+              "Point": 133900
+            }
+          ]
+        },
+        {
+          "Name": "Sd2plus",
+          "Points": [
+            {
+              "Year": 2016,
+              "Point": 10000
+            },
+            {
+              "Year": 2017,
+              "Point": 23320
+            },
+            {
+              "Year": 2018,
+              "Point": 36040
+            },
+            {
+              "Year": 2019,
+              "Point": 48760
+            },
+            {
+              "Year": 2020,
+              "Point": 61480
+            },
+            {
+              "Year": 2021,
+              "Point": 74200
+            },
+            {
+              "Year": 2022,
+              "Point": 86920
+            },
+            {
+              "Year": 2023,
+              "Point": 99640
+            },
+            {
+              "Year": 2024,
+              "Point": 112360
+            },
+            {
+              "Year": 2025,
+              "Point": 125080
+            },
+            {
+              "Year": 2026,
+              "Point": 137800
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
+

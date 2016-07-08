@@ -1,0 +1,21 @@
+<div class="title-bar">
+    <div class="left logo">
+        <a>Smart Investor</a>
+    </div>
+    <nav class="add-nav right">
+        <ul>
+            <li class="has-drop-down">
+                <si-header-dropdown on-change="Header.languageChange(selection)" class="flags"
+                                    dropdown-list="Header.languagesDropdown">
+                </si-header-dropdown>
+            </li>
+
+            <li ng-if="!Header.isLoggedIn()">
+                <a href=""
+                   ng-click="Header.login()"
+                   translate="btnLogin">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

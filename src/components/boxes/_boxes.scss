@@ -1,0 +1,16 @@
+.boxes {
+  .input-checked-parent {
+    background: #e9f4fb;
+  }
+
+  div.border {
+    border: 1px solid #ccc;
+
+    &:not(:last-child) {
+      border-right: 0;
+    }
+  }
+}
+
+
+

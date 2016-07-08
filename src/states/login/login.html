@@ -1,0 +1,25 @@
+<form ng-submit="login.login()" id="login-form">
+    <div class="heading">Login</div>
+    <div class="left">
+        <label for="email">Email</label> <br />
+        <input type="email" name="email" id="email" ng-model="email" required="required"/> <br />
+        <label type="password">Password</label> <br />
+        <input type="password" name="password" id="pass" ng-model="password" required="required"/> <br />
+        <input type="submit" id="submit" value="Submit" />
+    </div>
+    <div class="right">
+        <div class="connect">Connect with</div>
+        <a href=""  class="facebook">
+            <button ng-click="login.fbLogin()" class="fontawesome-facebook"></button>
+        </a> <br />
+        <a href="" class="twitter">
+            <span class="fontawesome-twitter"></span>
+        </a> <br />
+        <a href="" class="google-plus">
+            <span class="fontawesome-google-plus"></span>
+        </a>
+    </div>
+</form>
+<a href=""  class="facebook">
+    <button ng-click="login.fbLogin()" class="fontawesome-facebook">facebook</button>
+</a>

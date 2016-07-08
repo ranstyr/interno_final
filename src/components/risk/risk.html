@@ -1,0 +1,30 @@
+<div class="risk vertical grid-block padding-top padding-left">
+
+        <div class="grid-block padding-top-half">
+            <div class="grid-block align-center small-6">
+                <img src="../../assets/images/icon_RiskLevelMeter.svg" alt="">
+            </div>
+            <div class="grid-block small-6">
+                <div class="vertical grid-block risk-level">
+                    <div class="grid-block shrink small-font padding-right-half">Risk Level
+                     <span class="info padding-left-half">
+                         <img src="../../assets/images/Info.svg"
+                              tooltip={{vm.tooltip}}
+                              tooltip-placement="bottom"
+                              tooltip-append-to-body="true"
+                              tooltip-trigger="mouseenter"
+                              >
+                    </span>
+                    </div>
+                    <div class="grid-block shrink">{{vm.values[vm.riskLevel]}}</div>
+                </div>
+            </div>
+        </div>
+
+    <div class="grid-block">
+        <si-slider risk-level="vm.riskLevel" min="1" max="10" defalut-value="7" steps-amount="1"
+                   on-portfolio-change="vm.onPortfolioChange({val : val})"
+                   portfolio-data="vm.portfolioData"
+        ></si-slider>
+    </div>
+</div>

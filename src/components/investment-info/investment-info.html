@@ -1,0 +1,31 @@
+<div class="vertical grid-block investment-info">
+    <div class="grid-block padding shrink">
+        <div class="grid-block padding-half white-bg">
+            <div class="grid-block small-7 ">
+                <div class="vertical grid-block investment-title">
+                    <div class="padding-half padding-left">
+                        My Investment Fund
+                        </div>
+                    <div class="padding-half padding-left">
+                        <p>This section will outline your goal and the possible time to get there</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid-block small-2 padding-double box">
+                <div class="vertical grid-block">
+                    <div class="padding-top">Depositis</div>
+                    <div class="padding-top-half"><span>Initial: <span>$675,000</span></span></div>
+                </div>
+            </div>
+            <div class="grid-block small-3 box">
+                <si-risk
+                        risk-level = "vm.riskLevel"
+                        portfolio-data="vm.portfolioData"
+                        on-portfolio-change="vm.onPortfolioChange({val : val})"
+                        values='{1:"1 - Very low",2:"2 - Low",3:"3- Conservative",4:"4 - Moderate",5:"5 - Medium",6:"6 - Mid-High",7:"7 - High",8:"8 - Very high",9:"9 - Very high",10:"10 - Very high"}'>
+                </si-risk>
+            </div>
+        </div>
+    </div>
+</div>

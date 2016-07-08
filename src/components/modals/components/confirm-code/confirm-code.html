@@ -1,0 +1,66 @@
+<div>
+    <h2 class="title" translate="ttlConfirmCode"></h2>
+
+    <form name="ConfirmCode.confirmationForm"
+          class="validate-form"
+          ng-submit="ConfirmCode.confirm()"
+          novalidate>
+        <fieldset>
+            <label translate="msgConfirmCode"></label>
+
+            <div class="bg-danger"
+                 ng-if="ConfirmCode.errorMessage">
+                <span>{{ ConfirmCode.errorMessage | translate }}</span>
+            </div>
+
+            <div class="bg-success"
+                 ng-if="ConfirmCode.successMessage">
+                <span>{{ ConfirmCode.successMessage | translate }}</span>
+            </div>
+
+            <div class="row"
+                 ng-class="{ 'error': !ConfirmCode.inputValidity }">
+                <input class="no-icon"
+                       name="code"
+                       ng-model="ConfirmCode.code"
+                       type="text"
+                       placeholder="{{ 'lblpromptConfirmationCode' | translate }}"
+                       ng-focus="ConfirmCode.setAsValid()"
+                       ng-blur="ConfirmCode.checkValidity()"
+                       required
+                       autofocus>
+            </div>
+
+            <ul class="btn-list">
+                <li>
+                    <button class="btn btn-success"
+                            type="submit"
+                            translate="btnConfirm">
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btn btn-primary"
+                            ng-click="ConfirmCode.dismissModal()"
+                            translate="btnCancel">
+                    </button>
+                </li>
+
+            </ul>
+
+            <div class="text-holder">
+                <p>
+                    <a ng-click="ConfirmCode.createConfirmationCode()"
+                       translate="btnDidntRecieve">
+                    </a>
+                </p>
+            </div>
+
+            <a href="" class="close"
+               ng-click="ConfirmCode.dismissModal()">
+                <i class="close-modal"></i>
+            </a>
+
+        </fieldset>
+    </form>
+</div>
